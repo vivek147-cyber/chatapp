@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/chat.css">
+
+  <title>RealTime Chat app</title>
+</head>
+
+<body>
+
+  <section style="background-color: #CDC4F9; height: 100%; position: absolute; width: 100%;">
+    <div class="container py-5">
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="card" id="chat3" style="border-radius: 25px; margin-top: 50px;">
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+
+                  <div class="p-3">
+
+                    <div class="input-group rounded mb-3">
+                      <a class="btn" href="/" style="float: left;">Leave room</a>
+                    </div>
+
+                    <div data-mdb-perfect-scrollbar="true"
+                      style="position: relative; height: 400px; overflow-y:scroll;">
+                      <h3>users: </h3>
+                      <ul class="list-unstyled mb-0" id="users" style="background: aliceblue;
+                      border-radius: 8px;">
+                     
+                      </ul>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-7 col-xl-8">
+
+                  <div class="heading">
+                    Server: <h2 style="background: aliceblue;
+                    border-radius: 8px;
+                " id="room-name">
+                    </h2>
+                  </div>
+
+                  <div class="chat-message pt-3 pe-3" data-mdb-perfect-scrollbar="true"
+                    style="position: relative; height: 400px; overflow-y:scroll;">
+
+                    <div class="message d-flex flex-row justify-content-start">
+                      <!-- <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-chat/ava6-bg.png"
+                            alt="avatar 1" style="width: 45px; height: 100%;"> -->
+                      <!-- <div>
+                            <h6 class="ms-3 rounded-3 ">Vivek</h6>
+                            <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7; border-radius: 25px;">Lorem ipsum dolor
+                              sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                              magna aliqua.</p>
+                            <p class="small ms-3 mb-3 rounded-3 text-muted float-end">12:00 PM | Aug 13</p>
+                          </div> -->
+                    </div>
+
+
+                  </div>
+                  <hr>
+
+                  <form id="chat-form">
+                    <div class="text-muted d-flex justify-content-start align-items-center pe-3 pt-3 mt-2">
+                      <input class="form-control form-control-lg" id="msg" type="text" placeholder="Enter Message"
+                        required autocomplete="off">
+
+                      <!-- <Button class="ms-1 text-muted btn"><i class="fas fa-paperclip"></i></Button>
+                            <Button class="ms-3 text-muted btn" ><i class="fas fa-smile"></i></Button> -->
+                      <Button class="ms-3 btn"><i class="fas fa-paper-plane"></i></Button>
+
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+    integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js">
+  </script>
+
+
+</body>
+
+</html>
